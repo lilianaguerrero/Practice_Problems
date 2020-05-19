@@ -1,0 +1,17 @@
+# Find the first maximum length even word from a string
+
+ex1 = 'this is a test string' #string
+ex2 = 'geeksforgeeks is a platform for geeks' #platform
+ex3 = 'You are given an array of n numbers' #an
+
+def max_even_word(string):
+    word_list = string.split(" ")
+    result = []
+    for word in word_list:
+        if len(word) % 2 == 0:
+            result.append(word)
+    return max(result, key=len)
+
+print((max_even_word(ex3)))
+
+
