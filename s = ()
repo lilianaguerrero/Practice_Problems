@@ -1,0 +1,4 @@
+s = ()
+a_list = s.split()
+if ('(') and (')') in a_list == True:
+    return True

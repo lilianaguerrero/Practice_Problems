@@ -1,0 +1,102 @@
+import math
+
+# 100 --> 'one hundred'
+# 345223 --> 'three hundred forty five thousand two hundred twenty three'
+
+# 240,345,223
+
+# 223 = 'two' + 'hundred' + twenty three'
+# 345 = 'three hundred forty five' + 'thousand'
+# 240 = 'two hundred forty' + 'million'
+
+# """hundreds logic"""
+# num = 245
+# tens = 'forty five'
+
+# 140000 -> 'one hundred forty thousand'
+
+WORDS =  {
+  0: 'zero',
+  1: 'one',
+  2: 'two',
+  3: 'three',
+  4: 'four',
+  5: 'five',
+  6: 'six',
+  7: 'seven',
+  8: 'eight',
+  9: 'nine',
+  10: 'ten',
+  11: 'eleven',
+  12: 'twelve',
+  13: 'thirteen',
+  14: 'fourteen',
+  15: 'fifteen',
+  16: 'sixteen',
+  17: 'seventeen',
+  18: 'eighteen',
+  19: 'nineteen',
+  20: 'twenty',
+  30: 'thirty',
+  40: 'forty',
+  50: 'fifty',
+  60: 'sixty',
+  70: 'seventy',
+  80: 'eighty',
+  90: 'ninety',
+}
+
+# first = ''
+# second = ''
+# million = x + 'million' + thousand
+# thousand = y +'thousand' + hundred
+# hundred = z + 'hundred' + tens
+# ten = second + ' ' + first
+
+# if >= 100 <1,000 then num = 'hundred'
+# if >= 1,000 <1,000,000 then num = 'thousand'
+# if >= 1,000,000 <1,000,000,000 then num = 'million'
+
+
+
+def num_words(num):
+    """tens logic"""
+    if num < 100:
+      second_num = num - (num % 10)
+      second = WORDS[second_num]
+      first = WORDS[num % 10]
+      tens = second + ' ' + first
+      return tens
+  
+
+def num_words100(num):
+  """hundreds logic"""
+  if num >= 100 and num < 1000:
+    third_num = (num - (num % 100))/100
+    third =   WORDS[third_num]
+    hundreds = third + ' hundred ' + num_words(num%100)
+    return hundreds
+
+def num_words1000(num):
+  """thousands logic"""
+  if num >= 1000 and num < 1000000:
+    fourth_num = int((num - (num % 1000))/1000)
+    fourth =   WORDS[fourth_num]
+    thousands = fourth + ' thousand ' + num_words100(num%1000)
+    return thousands
+
+def num_words_mil(num):
+  """millions logic"""
+  if num >= 1000000 and num < 1000000000:
+    fifth_num = (num - (num % 1000000))/1000000
+    fifth =   WORDS[fifth_num]
+    mils = fifth + ' million ' + num_words1000(num%1000000)
+    return mils
+
+
+
+
+
+
+
+

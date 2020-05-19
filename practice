@@ -1,0 +1,7 @@
+def function(s):
+    a_list = s.split('')
+    print(a_list)
+    if ('(') and (')') in a_list == True:
+        return True
+    else:
+        return False
