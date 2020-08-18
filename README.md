@@ -10,7 +10,7 @@ This my personal list of recommended problems to do for interview preparation.
 # Arrays
 - https://leetcode.com/problems/product-of-array-except-self/
 - https://leetcode.com/problems/maximum-subarray/
-- https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
+- DONE https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
 - https://leetcode.com/problems/move-zeroes/
 - https://leetcode.com/problems/3sum/
 # Hashes
