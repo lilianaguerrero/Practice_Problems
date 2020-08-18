@@ -26,7 +26,7 @@ This my personal list of recommended problems to do for interview preparation.
 - https://leetcode.com/problems/set-matrix-zeroes/
 # Strings
 - DONE https://leetcode.com/problems/positions-of-large-groups/
-- https://leetcode.com/problems/valid-anagram/
+- DONE https://leetcode.com/problems/valid-anagram/
 - https://leetcode.com/problems/longest-palindromic-substring/
 - https://leetcode.com/problems/longest-substring-without-repeating-characters/
 # Trees 
