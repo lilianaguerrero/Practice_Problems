@@ -28,6 +28,6 @@ def arr_search_alt(x,a):
 def countBisect(x, arr):
     return bisect_right(a,x) - bisect_left(a,x)
 print(countBisect(x,a))
-
+#bisect gives you position
 #must be used on sorted list
 #O(log(n))
