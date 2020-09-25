@@ -8,15 +8,11 @@ from itertools import *
 # So, you should have a function that returns the set {3, 12, 21, 30} when num_coins is 3
 
 def change_quant(num_coins):
-    # Get all permutations of length 2 
-    # and length 2 
     change_val = {'penny': 1, 'dime':10
     }
     values = list(change_val.values())
     perm = combinations_with_replacement(values,num_coins) 
     output = set()
-      
-    # Print the obtained permutations 
     for i in list(perm):
         output.add(sum(i))
     print(output)
